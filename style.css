@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
+
+body {
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Header */
+nav.header-nav {
+    background: #e7e6e6 !important;
+    z-index: 99;
+}
+
+.logo {
+    width: 80px;
+}
+
+nav .custom-nav li {
+    position: relative;
+}
+
+nav  .custom-nav li::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    left: 10px;
+    right: 0;
+    top: 65px;
+    opacity: 0;
+    background: #3460f7;
+    visibility: hidden;
+    transition: .3s;
+}
+
+nav .custom-nav li:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+nav .custom-nav li a {
+    font-weight: 600;
+    color: #000 !important;
+}
+
+.custom-nav li a {}
+
+nav .header-nav .custom-nav li a:hover {}
+
+nav .header-button {
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background: #fafafa;
+    color: #3460f7;
+    font-weight: 600;
+    transition: .5s;
+    padding: 10px 18px;
+}
+
+nav .header-button:hover {
+    color: #fafafa;
+    background: #3460f7;
+
+}
+
+
+/* Banner css */
+.banner {
+    background: #edf6ff;
+    overflow: hidden;
+}
+
+.banner .banner-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .banner-img {
+    position: relative;
+    top: -93px;
+    right: -280px;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.banner .banner-btn {
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    background: #3460f7;
+    border: none;
+    outline: none;
+}
+
+.banner .banner-btn:focus {
+    box-shadow: none;
+}
+
+/* Service css */
+
+.service .service-p {
+    position: relative;
+}
+
+.service .service-p::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 100px;
+    border-bottom: 3px solid #3460f7;
+    top: 10px;
+    left: 0;
+    right: 0;
+}
+
+.service .card {
+    padding: 10px;
+    background: #f9fcff;
+    border-radius: 10px;
+}
+
+.service h2 {
+    color: #3460f7;
+}
+
+.service .icon-design {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    background: #3460f7;
+    text-align: center;
+    line-height: 70px;
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 50% 50% 50% 0;
+    position: relative;
+}
+
+.service .icon-design::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 100px;
+    border-bottom: 3px solid #3460f7;
+    top: -10px;
+    left: 0;
+    right: 0;
+}
+
+/* exp css */
+.exp {
+    background: linear-gradient(#3b4764, rgb(0, 0, 0, .1), #3b4764, rgb(0, 0, 0, .1)), url(./img/video-bg.jpg) top no-repeat;
+    background-size: cover;
+    padding: 200px 0 !important;
+}
+
+
+
+.animation-main {
+    /* width: 100%; */
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation-main .play-btn {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    color: blue;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.animation-main .play-btn::before {
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    animation: animation_main 2s ease-in-out infinite;
+}
+
+.animation-main .play-btn::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    animation: animation_main 2s ease-in-out infinite;
+}
+
+@keyframes animation_main {
+
+
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
